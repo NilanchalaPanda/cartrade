@@ -1,0 +1,9 @@
+.env
+**/.env
+node_modules/
+**/node_modules/
+*.log
+sdk/wallet/*
+!sdk/wallet/.gitkeep
+.DS_Store
+coverage/

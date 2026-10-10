@@ -1,0 +1,14 @@
+services:
+  cartrade-sdk:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: cartrade-sdk:1.0
+    container_name: cartrade-sdk
+    restart: unless-stopped
+    network_mode: host
+    env_file:
+      - ./sdk/.env
+    volumes:
+      - ./sdk/wallet:/app/sdk/wallet
+      - ${FABRIC_NETWORK_PATH:?Set FABRIC_NETWORK_PATH to your Fabric crypto-material directory}:/fabric-network:ro

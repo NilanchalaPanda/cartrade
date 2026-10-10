@@ -1,0 +1,27 @@
+{
+  "name": "cartrade-node-sdk",
+  "version": "2.0.0",
+  "private": true,
+  "description": "REST SDK for the CarTrade Hyperledger Fabric case study",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "node --watch src/index.js",
+    "cli": "node app.js",
+    "check": "node --check src/index.js && node --check src/config/network.config.js && node --check src/services/identity.service.js && node --check src/services/fabric.service.js && node --check src/controllers/identity.controller.js && node --check src/controllers/vehicle.controller.js && node --check src/controllers/deal.controller.js && node --check src/controllers/token.controller.js && node --check src/routes/identity.routes.js && node --check src/routes/vehicle.routes.js && node --check src/routes/deal.routes.js && node --check src/routes/token.routes.js && node --check src/middleware/error.middleware.js && node --check src/middleware/identity.middleware.js && node --check connection.js && node --check app.js",
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "@grpc/grpc-js": "^1.13.4",
+    "@hyperledger/fabric-gateway": "^1.4.0",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "fabric-ca-client": "^2.2.20",
+    "fabric-network": "^2.2.20",
+    "helmet": "^8.0.0",
+    "morgan": "^1.10.0"
+  }
+}
