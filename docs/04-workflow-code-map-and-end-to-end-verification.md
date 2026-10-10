@@ -1025,7 +1025,7 @@ the current error middleware and tests prove it.
 
 ---
 
-## 20. How to inspect the exact current code before an interview/demo
+## 20. How to inspect the exact current code before an demo
 
 From the repository root:
 

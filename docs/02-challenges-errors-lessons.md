@@ -1,6 +1,6 @@
 # CarTrade Hyperledger Fabric --- Challenges, Errors and Lessons Learned
 
-> This is a troubleshooting and interview-revision log. It follows the
+> This is a troubleshooting and revision log. It follows the
 > order supported by the conversation/log excerpts. Exact terminal
 > output is included only where it was captured. Some issues were
 > discussed over several turns; where exact chronology cannot be proven,
@@ -45,7 +45,7 @@ corresponding wallet identity has been enrolled.
 -H "X-Fabric-Identity: dealer"
 ```
 
-**How to explain it in an interview:** an MSP ID and an
+**How to explain it for a KT:** an MSP ID and an
 application-level wallet alias are different concepts. `Org1MSP`
 identifies Fabric membership; `dealer` is the SDK's lookup key that
 resolves to an identity certificate/private key plus MSP ID.
@@ -265,8 +265,7 @@ transaction invocation."
 
 **Evidence limitation:** the available log excerpt proves exit 127, but
 does not preserve a definitive final root cause for that particular
-container exit. Do not tell an interviewer a more specific cause unless
-you can show the corresponding container logs or a recorded fix.
+container exit.
 
 ### Challenge 8 --- Chaincode deployment/version/sequence had to be tracked carefully
 
@@ -378,7 +377,7 @@ translated cleanly at the HTTP boundary.
 
 ## 3. CA troubleshooting: how to identify the correct certificate
 
-An interviewer may ask: "There are multiple CA certificates. How did you
+A doubt may occur: "There are multiple CA certificates. How did you
 know which one to use?"
 
 Answer with the process, not "I tried files until it worked":
@@ -503,7 +502,7 @@ The arithmetic reconciles: 1,250,000 minted minus 10 burned equals
 1,249,990 outstanding. The allowance is not part of supply or a separate
 balance.
 
-## 6. Interview-ready lessons
+## 6. Important lessons
 
 - **A peer MSP admin is not automatically a CA registrar.** MSP
   administration and CA registration authority are separate permission
